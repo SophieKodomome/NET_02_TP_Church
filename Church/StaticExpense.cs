@@ -3,10 +3,10 @@ namespace Expenses
     public class StaticExpense
     {
         private int id;
-        private string name;
+        private string motif;
         private int montantUnitaire;    
         public int Id{get;set;}
-        public string Name{get;set;}
+        public string Motif{get;set;}
         public int MontantUnitaire{get;set;}
 
 
@@ -17,9 +17,9 @@ namespace Expenses
             Id=id;
             return this;
         }
-        public StaticExpense addName(string name)
+        public StaticExpense addMotif(string motif)
         {
-            Name=name;
+            Motif=motif;
             return this;
         }
         public StaticExpense addMontantUnitaire(int montantUnitaire)

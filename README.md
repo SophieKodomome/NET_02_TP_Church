@@ -6,23 +6,23 @@ Le fengonana ihany fa atao C# ndray.. miampy dépense ilay vola mivoaka an'ny fe
 -depense Variable: jirama, sns.. calculena ohatran'ny le nicalculenan'le prevision ihany le izy.. de mivoaka isaky ny fin(dernier) dimanche du mois io dépense io de la caisse.
 
 Form page(index):
-  front:
-    -Form
-      -Regler les static expenses
-        -Options(Pas payer du tout,Mensuel, Semestriel, Trimestriel)
-      -Regler les variable expenses
+  (ok)front:
+    (ok)-Form
+      (ok)-Regler les static expenses
+        (ok)-Options(Pas payer du tout,Mensuel, Semestriel, Trimestriel)
+      (ok)-Regler les variable expenses
         -Options(Pris en compte, non Pris en compte)
-      -Button "Prevoir"
+      (ok)-Button "Prevoir"
   fonctions & classes:
-    -StaticExpense(id,nom,montant_unitaire)
-    -VariableExpense(id,nom,montant_unitaire,variable)
+    (ok)-StaticExpense(id,nom,montant_unitaire)
+    (ok)-VariableExpense(id,nom,montant_unitaire,variable)
     -dbConnect
       -getListDepensesFixes()
       -getListDepensesVariable()
   data:
-    -use the same as church
-    -table depenses_fixes(id,nom,montant_unitaire)
-    -table depenses_variables(id,nom,montant_unitaire,variable)
+    (ok)-use the same as church
+    (ok)-table depenses_fixes(id,nom,montant_unitaire)
+    (ok)-table depenses_variables(id,nom,montant_unitaire,variable)
   
   integration:
     -send info to result page

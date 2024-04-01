@@ -3,12 +3,15 @@ namespace Expenses
     public class VariableExpense
     {
         private int id;
-        private string name;
-        private int montantUnitaire; 
+        private string motif;
+        private int montantUnitaire;
+
+        private string nomVariable;
         private int variable;   
         public int Id{get;set;}
-        public string Name{get;set;}
+        public string Motif{get;set;}
         public int MontantUnitaire{get;set;}
+        public string MotifVariable{get;set;}
         public int Variable{get;set;}
 
 
@@ -19,14 +22,19 @@ namespace Expenses
             Id=id;
             return this;
         }
-        public VariableExpense addName(string name)
+        public VariableExpense addMotif(string motif)
         {
-            Name=name;
+            Motif=motif;
             return this;
         }
         public VariableExpense addMontantUnitaire(int montantUnitaire)
         {
             MontantUnitaire=montantUnitaire;
+            return this;
+        }
+        public VariableExpense addMotifVariable(string motifVariable)
+        {
+            MotifVariable=motifVariable;
             return this;
         }
         public VariableExpense addVariable(int variable)
