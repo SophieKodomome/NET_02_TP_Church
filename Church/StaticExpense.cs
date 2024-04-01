@@ -1,10 +1,7 @@
 namespace Expenses
 {
     public class StaticExpense
-    {
-        private int id;
-        private string motif;
-        private int montantUnitaire;    
+    { 
         public int Id{get;set;}
         public string Motif{get;set;}
         public int MontantUnitaire{get;set;}
