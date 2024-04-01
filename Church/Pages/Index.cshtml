@@ -1,0 +1,62 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<body class="text-center">
+    <h1 class="display-4">.NET an Jesosy</h1>
+    <article class="container signin-container bg-white p-4 rounded shadow mt-4 mx-auto" style="max-width:50%">
+        <form method="get" asp-page-handler="Result">
+            <div class="row">
+                <div class="col text-start">
+                    <header>
+                        <h2 class="display-6" style="color: royalblue">static expense</h2>
+                        <hr>
+                    </header>
+                    <section>
+                        <h3 class="form-label">expenses 1</h3>
+                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                            <option value="0">Pas payer du tout</option>
+                            <option value="1">Mensuel</option>
+                            <option value="2">Trimestriel</option>
+                            <option value="3">Semestriel</option>
+                        </select>
+                    </section>
+                    <section>
+                        <h3 class="form-label">expenses 2</h3>
+                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                            <option value="0">Pas payer du tout</option>
+                            <option value="1">Mensuel</option>
+                            <option value="2">Trimestriel</option>
+                            <option value="3">Semestriel</option>
+                        </select>
+                    </section>
+                </div>
+                <div class="col text-start">
+                    <header>
+                        <h2 class="display-6" style="color: royalblue">variable expense</h2>
+                        <hr>
+                    </header>
+                    <section>
+                        <h3 class="form-label">expenses 1</h3>
+                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                            <option value="0">Included</option>
+                            <option value="1">Not Included</option>
+                        </select>
+                    </section>
+                    <section>
+                        <h3 class="form-label">expenses 2</h3>
+                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                            <option value="0">Included</option>
+                            <option value="1">Not Included</option>
+                        </select>
+                    </section>
+                </div>
+            </div>
+            <div class="text-end">
+                <input class="btn btn-primary" type="submit" value="Commit">
+            </div>
+        </form>
+    </article>
+</body>
