@@ -1,3 +1,5 @@
+using Npgsql;
+
 namespace Expenses
 {
     public class VariableExpense
@@ -50,6 +52,29 @@ namespace Expenses
         {
             Mois=mois;
             return this;
+        }
+        private static List<VariableExpense> GetVariableExpenses(NpgsqlConnection connection)
+        {
+            List<VariableExpense> listVariableExpense = new List<VariableExpense>();
+
+            connection.Open();
+            using(var command=new NpgsqlCommand("select * from static_expenses",connection))
+            {
+                using(var reader=command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        VariableExpense variableExpense = new VariableExpense().
+                        addId(reader.GetInt32(0)).
+                        addMotif(reader.GetString(1)).
+                        addMontantUnitaire(reader.GetInt32(2));
+
+                        listVariableExpense.Add(variableExpense);
+                    }
+                }
+            }
+            connection.Close();
+            return listVariableExpense;
         }
     }
 }
