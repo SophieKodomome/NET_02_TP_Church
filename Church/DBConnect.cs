@@ -18,7 +18,7 @@ namespace connect
 
         private void Init_Connection()
         {
-            ConnectionString="Host=localhost;Port=5432;Database=pharmacie;Username=pharmacie;Password=pharmacie;";
+            ConnectionString="Host=localhost;Port=5432;Database=church;Username=church;Password=church;";
 
             using var connection = new NpgsqlConnection(ConnectionString);
 
